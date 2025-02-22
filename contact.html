@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ဆက်သွယ်ရန် - Vibrant & Modern</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(45deg, #1e90ff, #ff00ff, #00ff7f);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            color: #fff;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            padding: 4rem 0;
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 25px;
+            margin-bottom: 2rem;
+            animation: bounceIn 1s ease;
+        }
+        header h1 {
+            font-size: 3.5rem;
+            text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
+        }
+        .content {
+            background: rgba(255, 255, 255, 0.25);
+            padding: 2rem;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            margin-bottom: 2rem;
+            animation: slideInLeft 0.8s ease;
+        }
+        .content p {
+            color: #e0e0e0;
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+        .back-button {
+            display: block;
+            margin: 2rem auto;
+            padding: 15px 30px;
+            background: #ffd700; /* Yellow (contact ရဲ့ သောက်သောက်တွေ လိုက်ညီပခြင်း) */
+            color: #fff;
+            border: none;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .back-button:hover {
+            background: #ff00ff; /* Purple/violet */
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(255, 0, 255, 0.5);
+        }
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 25px;
+            margin-top: 2rem;
+        }
+
+        /* Animations */
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        @keyframes bounceIn {
+            0% { transform: scale(0.5); opacity: 0; }
+            60% { transform: scale(1.1); opacity: 1; }
+            100% { transform: scale(1); }
+        }
+        @keyframes slideInLeft {
+            from { transform: translateX(-100px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>ဆက်သွယ်ရန်</h1>
+        </header>
+        <div class="content">
+            <p>Facebook: Aung Myint Myat</p>
+            <p>Email: aungmyintmya5000@gmail.com</p>
+            <p>Phone: 09-966609577</p>
+            <p>Telegram: @ammroot</p>
+            <p>City: TGI</p>
+        </div>
+        <button class="back-button" onclick="window.location.href='index.html'">ပင်မစာမျက်နှာသို့</button>
+        <footer>
+            <p>© 2025 My Blog - Crafted with Passion</p>
+        </footer>
+    </div>
+</body>
+</html>

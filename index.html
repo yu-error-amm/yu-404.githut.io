@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ကျွန်တော့်ဘလော့ဂ် - Vibrant & Modern</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(45deg, #1e90ff, #ff00ff, #00ff7f);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            color: #fff;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            padding: 4rem 0;
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 25px;
+            margin-bottom: 2rem;
+            animation: bounceIn 1s ease;
+        }
+        header h1 {
+            font-size: 3.5rem;
+            text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 2.5rem;
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50px;
+            backdrop-filter: blur(5px);
+            margin-bottom: 2rem;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            padding: 0.5rem 1.5rem;
+            transition: all 0.3s ease;
+        }
+        nav a:hover {
+            transform: rotate(5deg) scale(1.2);
+        }
+        /* "ကျွန်တော်အကြောင်း" ရဲ့ နောက်ခံအရောင်ကို အမည်းရောင်သုံးပါ */
+        nav a[href="about.html"] {
+            background: #000;
+            border-radius: 12px;
+            padding: 0.5rem 1.5rem;
+        }
+        /* "ပို့စ်များ"၊ "ဆက်သွယ်ရန်" ရဲ့ မတူညီတဲ့ နောက်ခံရောင်သုံးပါ */
+        nav a[href="posts.html"] {
+            background: #00ffff; /* Cyan */
+            border-radius: 12px;
+        }
+        nav a[href="contact.html"] {
+            background: #ffd700; /* Yellow */
+            border-radius: 12px;
+        }
+        nav a[href="posts.html"]:hover,
+        nav a[href="contact.html"]:hover,
+        nav a[href="about.html"]:hover {
+            color: #000; /* Hover လုပ်ရင် စာသားကို အမည်းရောင်သုံးပါ */
+            text-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+        }
+        #post-form {
+            background: rgba(255, 255, 255, 0.25);
+            padding: 2rem;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            margin-bottom: 2rem;
+            animation: slideInLeft 0.8s ease;
+        }
+        /* "ခေါင်းစဉ်" နဲ့ "အကြောင်းအရာ" input နဲ့ textarea ကို ဖျက်ပါ */
+        .blog-post {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-radius: 20px;
+            color: #333;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+            animation: popIn 0.5s ease;
+            transition: transform 0.3s;
+        }
+        .blog-post:hover {
+            transform: translateY(-5px);
+        }
+        .blog-post h2 {
+            color: #ff4b2b;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        .blog-post .date {
+            color: #666;
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+        }
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 25px;
+            margin-top: 2rem;
+        }
+
+        /* Animations */
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        @keyframes bounceIn {
+            0% { transform: scale(0.5); opacity: 0; }
+            60% { transform: scale(1.1); opacity: 1; }
+            100% { transform: scale(1); }
+        }
+        @keyframes slideInLeft {
+            from { transform: translateX(-100px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+        @keyframes popIn {
+            from { transform: scale(0.8); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>My Blog</h1>
+            <p>Learing after using</p>
+            <p>Using after testing</p>
+            <p>Testing after sharing</p>
+            <p>But don't stop your learning</p>
+        </header>
+        <nav>
+            <a href="posts.html">ပို့စ်များ</a>
+            <a href="about.html">ကျွန်တော်အကြောင်း</a>
+            <a href="contact.html">ဆက်သွယ်ရန်</a>
+        </nav>
+        <div id="post-form">
+            <!-- "ခေါင်းစဉ်" နဲ့ "အကြောင်းအရာ" input နဲ့ textarea ကို ဖျက်ပါ -->
+        </div>
+        <div id="posts-container">
+            <!-- ပို့စ်တွေ ဒီမှာ ပေါ်လာမယ် -->
+        </div>
+        <footer>
+            <p>© 2025 My Blog - Crafted with Passion</p>
+        </footer>
+    </div>
+
+    <script>
+        let posts = [
+            { title: "New testing", content: "Testing", date: "ဖေဖော်ဝါရီ ၂၁၊ ၂၀၂၅" }
+        ];
+
+        window.onload = function() {
+            displayPosts();
+        };
+
+        function displayPosts() {
+            const container = document.getElementById("posts-container");
+            container.innerHTML = "";
+            posts.forEach((post, index) => {
+                const postDiv = document.createElement("div");
+                postDiv.className = "blog-post";
+                postDiv.innerHTML = `
+                    <h2>${post.title}</h2>
+                    <div class="date">${post.date}</div>
+                    <p>${post.content}</p>
+                `;
+                container.appendChild(postDiv);
+            });
+        }
+
+        // "ခေါင်းစဉ်" နဲ့ "အကြောင်းအရာ" ဖျက်ပါတဲ့အတွက် addPost() function ကို ဖျက်ပါ
+    </script>
+</body>
+</html>
